@@ -19,7 +19,7 @@ You are all set!
 ```
 The `lacework configure` command generates a file named `.lacework.toml` inside your home directory (`$HOME/.lacework.toml`) with a single profile named `default`.
 ## Deploy New CloudTrail and Add Configuration Assessment
-1. clone the repositories with the terraform file
+1. clone this repositories with the terraform file
 2. terraform init
 3. terraform plan
 4. terraform apply
