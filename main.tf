@@ -29,3 +29,11 @@ module "aws_cloudtrail" {
   iam_role_arn          = module.aws_config.iam_role_arn
   iam_role_external_id  = module.aws_config.external_id
 }
+resource "aws_s3_bucket_public_access_block" "cloudtrail s3" {
+  bucket = module.aws_cloudtrail.bucket_name
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
